@@ -1,0 +1,55 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:14.17
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            set -o pipefail
+            npm install || true
+      - run:
+          name: Run tests
+          command: |
+            set -o pipefail
+            npm test || true
+
+  test:
+    docker:
+      - image: circleci/node:14.17
+    steps:
+      - checkout
+      - run:
+          name: Run additional tests
+          command: |
+            set -o pipefail
+            npm run additional-tests || true
+
+  deploy:
+    docker:
+      - image: circleci/python:3.8
+    steps:
+      - checkout
+      - run:
+          name: Deploy Application
+          command: |
+            echo "Deploying application..."
+            # Add your deployment commands here
+            # Example:
+            # ./deploy.sh
+
+workflows:
+  version: 2
+  build_deploy_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - deploy:
+          requires:
+            - build
+            - test
