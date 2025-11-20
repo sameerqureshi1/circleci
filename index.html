@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sameer Qureshi — DevOps Engineer CV</title>
+  <style>
+    /* ---------- GLOBAL RESET ---------- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      font-family: "Poppins", "Segoe UI", Roboto, sans-serif;
+      background: #f4f7fb;
+      color: #1e293b;
+    }
+
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---------- CONTAINER ---------- */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+    }
+
+    /* ---------- SIDEBAR ---------- */
+    .sidebar {
+      background: linear-gradient(180deg, #0f172a, #1e293b);
+      color: #fff;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .photo {
+      width: 100%;
+      height: 130px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #0ea5e9, #6366f1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .name { font-size: 21px; font-weight: 700; margin-top: 6px; }
+    .sub { opacity: 0.85; font-size: 13px; margin-bottom: 8px; }
+
+    .contact, .skills, .languages {
+      background: rgba(255,255,255,0.06);
+      padding: 14px;
+      border-radius: 10px;
+    }
+
+    .contact p { font-size: 14px; margin-bottom: 8px; line-height: 1.4; }
+    .small { font-size: 12px; opacity: 0.9; }
+
+    .skills-title, .lang-title {
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #e2e8f0;
+    }
+
+    .skill-list { display: flex; flex-direction: column; gap: 10px; }
+    .skill-item { display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+    .skill-bar {
+      width: 55%;
+      height: 8px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .skill-bar i {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg,#22d3ee,#06b6d4);
+      border-radius: 6px;
+    }
+
+    /* ---------- MAIN ---------- */
+    .main { padding: 30px 34px; }
+
+    header .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    h1 { font-size: 28px; color: #0f172a; margin-bottom: 6px; }
+    .meta { color: #475569; font-size: 14px; }
+    .about {
+      margin-top: 16px;
+      font-size: 15px;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section { margin-top: 28px; }
+    .section-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: #0f172a;
+      margin-bottom: 14px;
+      border-left: 4px solid #2563eb;
+      padding-left: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .job {
+      border: 1px solid #e2e8f0;
+      background: #f9fafb;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: all 0.2s ease;
+    }
+    .job:hover { background: #f1f5f9; transform: translateY(-2px); }
+
+    .job-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .title-role { font-weight: 700; color: #1e293b; }
+    .company { font-size: 13px; color: #64748b; }
+    .dates { font-size: 13px; color: #475569; }
+    ul { margin-top: 8px; margin-left: 18px; font-size: 14px; color: #334155; line-height: 1.6; }
+
+    /* ---------- PROJECTS ---------- */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .project {
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px dashed #cbd5e1;
+      background: #f8fafc;
+      transition: all 0.2s ease;
+    }
+    .project:hover { background: #f1f5f9; }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      margin-top: 24px;
+      font-size: 13px;
+      color: #475569;
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 880px) {
+      .container { grid-template-columns: 1fr; }
+      .sidebar { order: 2; }
+      .main { padding: 24px; }
+    }
+
+    @media (max-width: 520px) {
+      h1 { font-size: 24px; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="document" aria-label="CV — Sameer Qureshi">
+    <aside class="sidebar" aria-label="Sidebar">
+      <div class="photo">S Q</div>
+      
+
+      <div class="contact">
+        <p><strong>Phone:</strong><br>(+92) 03359738505</p>
+        <p><strong>Email:</strong><br><a href="mailto:sameerqureshi.p1@gmail.com">sameerqureshi.p1@gmail.com</a></p>
+        <p><strong>GitHub:</strong><br><a href="https://github.com/sameerqureshi1" target="_blank">github.com/sameerqureshi1</a></p>
+        <p><strong>Location:</strong><br>Islamabad, Pakistan</p>
+        <p><strong>DOB / Gender:</strong><br>14/10/2002 · Male</p>
+      </div>
+
+      <div class="skills">
+        <div class="skills-title">Technical Skills</div>
+        <div class="skill-list">
+          <div class="skill-item"><span>Cloud & Infrastructure</span><div class="skill-bar"><i style="width:92%"></i></div></div>
+          <div class="skill-item"><span>Docker / Containers</span><div class="skill-bar"><i style="width:90%"></i></div></div>
+          <div class="skill-item"><span>Terraform / Ansible</span><div class="skill-bar"><i style="width:85%"></i></div></div>
+          <div class="skill-item"><span>Monitoring (Grafana)</span><div class="skill-bar"><i style="width:86%"></i></div></div>
+          <div class="skill-item"><span>CI/CD (GitHub Actions)</span><div class="skill-bar"><i style="width:88%"></i></div></div>
+        </div>
+      </div>
+
+      <div class="languages">
+        <div class="lang-title">Languages</div>
+        <div class="small"><strong>Urdu</strong> — C1 (Fluent)</div>
+        <div class="small" style="margin-top:6px;"><strong>English</strong> — B2 (Professional)</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header>
+        <div class="title">
+          <div>
+            <h1>Sameer Qureshi</h1>
+            <div class="meta">DevOps Engineer • AWS • Docker • Terraform • CI/CD</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="meta">📧 <a href="mailto:sameerqureshi.p1@gmail.com">sameerqureshi.p1@gmail.com</a></div>
+            <div class="meta">📞 (+92) 03359738505</div>
+          </div>
+        </div>
+
+        <p class="about">
+          Motivated DevOps Engineer skilled in cloud infrastructure, automation, and monitoring. 
+          Experienced with AWS, Docker, Terraform, Ansible, and CI/CD pipelines. 
+          Passionate about optimizing system reliability, automating workflows, and ensuring continuous delivery across scalable environments.
+        </p>
+      </header>
+
+      <section>
+        <div class="section-title">Work Experience</div>
+
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <div class="title-role">DevOps Intern — Adan Institute of Technology</div>
+              <div class="company">Islamabad</div>
+            </div>
+            <div class="dates">Aug 2025 — Present</div>
+          </div>
+          <ul>
+            <li>Deployed Linux servers using Nginx and automated configurations via Bash and cron.</li>
+            <li>Built and managed Docker containers with custom images and volumes.</li>
+            <li>Implemented monitoring stack (Prometheus, Grafana, Node Exporter) with alerts.</li>
+            <li>Developed AWS infrastructure (EC2, S3, Load Balancer, Lambda, DynamoDB).</li>
+            <li>Configured CI/CD pipelines with GitHub Actions for automated deployments.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <div class="title-role">IT Support Specialist — Punjab Cash and Carry</div>
+              <div class="company">Islamabad</div>
+            </div>
+            <div class="dates">Oct 2024 — May 2025</div>
+          </div>
+          <ul>
+            <li>Provided technical and network support across departments.</li>
+            <li>Troubleshot OS, printers, and network hardware issues.</li>
+            <li>Maintained documentation and handled routine maintenance tasks.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <div class="title-role">Front-End Intern — Integrated IT Solutions</div>
+              <div class="company">Rawalpindi</div>
+            </div>
+            <div class="dates">Jul 2022 — Aug 2022</div>
+          </div>
+          <ul>
+            <li>Developed responsive UIs with HTML, CSS, and Bootstrap.</li>
+            <li>Collaborated with backend team for API integration.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">Education</div>
+        <div class="job" style="border-style:solid;">
+          <div class="job-header">
+            <div>
+              <div class="title-role">B.Sc. Software Engineering — SZABIST</div>
+              <div class="company">Islamabad</div>
+            </div>
+            <div class="dates">2020 — 2024 · Final Grade: A</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">Projects</div>
+        <div class="two-col">
+          <div class="project">
+            <strong>AWS Serverless Web Application</strong>
+            <p style="margin-top:6px;">Built a serverless app using Lambda, API Gateway, and DynamoDB with Terraform automation and CI/CD via GitHub Actions.</p>
+            <a href="https://medium.com/@sameerqureshi.p1_3891/my-journey-with-the-aws-serverless-web-project-5f31c9ea8f42" target="_blank">Read more</a>
+          </div>
+          <div class="project">
+            <strong>Dockerized Tour Web App</strong>
+            <p style="margin-top:6px;">Containerized a web app using Docker, created custom images, and automated deployments using GitHub Actions.</p>
+          </div>
+          <div class="project" style="grid-column:1 / -1;">
+            <strong>Final Year Project — Final Resting Place</strong>
+            <p style="margin-top:6px;">Centralized platform for funeral service arrangements including directories and service providers.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">Technical Skills</div>
+        <div class="two-col">
+          <ul>
+            <li><strong>Cloud:</strong> AWS (EC2, S3, Lambda, CloudFront, API Gateway)</li>
+            <li><strong>Containers:</strong> Docker, Dockerfiles, Volumes</li>
+            <li><strong>Automation:</strong> Terraform, Ansible, Bash</li>
+          </ul>
+          <ul>
+            <li><strong>Monitoring:</strong> Prometheus, Grafana, Node Exporter</li>
+            <li><strong>CI/CD:</strong> GitHub Actions, GitLab CI/CD</li>
+            <li><strong>Servers:</strong> Linux (Ubuntu), Nginx</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        <div>© 2025 Sameer Qureshi — <a href="mailto:sameerqureshi.p1@gmail.com">sameerqureshi.p1@gmail.com</a>
+          
+        </div>
+      </footer>
+    </main>
+  </div>
+
+
+</body>
+</html>
